@@ -1,0 +1,38 @@
+<div  class="container">
+    <div class="top">
+      <img class="gif-night" src="../assets/goodnight-iloveyou.gif">
+      <img class="gif-strong" src="../assets/hello-kitty-strong.gif">
+    </div>
+    <div class="container-principal">
+      <img class="gif-dance-ngga" src="../assets/kitty-ngga.gif" [hidden]="isSmallScreen">
+      <div class="container-page" *ngIf="!answer; else Yeah">
+        <h3 *ngIf="idNo>=1" class="why">Deja de darle que no</h3>
+        <img *ngIf="idNo>=1" class="why-img" src="../assets/hello-kitty-angry.gif">
+        <img *ngIf="idNo<1" src="../assets/hello-kitty.gif">
+        <div class="container-question">
+          <ng-container>
+            <h3>Quieres volver ?</h3>
+            <div class="container-buttons">
+              <button class="container-button-yes" (click)="onYes()">SIIIIIIII !</button>
+              <button class="container-button-no" *ngIf="nosArray$ && !answer" (click)="incrementNo()">{{ (nosArray$ | async)[ idNo ].text }}</button>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+      <ng-template #Yeah>
+        <div class="container-page">
+          <img class="gif-dance-yes" src="../assets/hello-kitty-sanrio.gif">
+        </div>
+        <div class="container-wedding-wedding" *ngIf="existsATrue">
+          <img class="container-wedding" src="../assets/wedding.gif">
+          <h3>te queres casar conmigo?</h3>
+          <button class="container-button-yes" (click)="onWeddingYes()">SIIIIIIII !</button>
+          <button class="container-button-no" (click)="onWeddingNo()">NO</button>
+        </div>
+      </ng-template>
+    </div>
+    <div class="bottom">
+      <img class="gif-bear" src="../assets/brown-bear.gif">
+      <img class="gif-dance-cute" src="../assets/hello-kitty-dance.gif">
+    </div>
+  </div>

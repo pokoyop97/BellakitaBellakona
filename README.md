@@ -1,2 +1,0 @@
-# BellakitaBellakona
-Personal proyect

@@ -1,0 +1,134 @@
+
+.container{
+    font-family: "Janda Happy Day";
+    width: 100%;
+    height: 100vh;
+    display: block;
+    
+    &-page{
+        display: grid;
+        justify-content: center;
+    }
+    &-wedding{
+        position: relative;
+        display: inline-grid;
+    }
+    &-question{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    &-buttons{
+        display: block;
+    }
+    &-button{
+        &-yes{
+            font-family: 'Janda Happy Day';
+            background-color: #FBC1D9;
+            border-radius: 5px;
+            border: solid black 1px;
+            margin:10px;
+        }
+        &-no{
+            font-family: 'Janda Happy Day';
+            background-color: red;
+            border-radius: 5px;
+            border: solid black 1px;
+            width: auto;
+            height: 100%;
+            max-width: 300px;
+            max-height: 40px;
+            margin:10px;
+        }
+    }
+    
+}
+.gif{
+    &-bear{
+        transform: scale(0.5);
+    }
+    &-night{
+        transform: scale(0.5);
+    }
+    &-strong{
+        transform: scale(0.7);
+    }
+    &-dance{
+        &-cute{
+            transform: scale(0.5);
+        }
+        &-yes{
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            /* transform: scale(1.5); */
+            max-height: 427px;
+            width: auto;
+        }
+        &-ngga{
+            position: absolute;
+            right: 0px;
+        }
+    }
+}
+.why{
+    display: flex;
+    justify-content: center;
+    &-img{
+        max-width: 498px;
+        max-height: 300px;
+    }
+}
+.container-wedding-wedding{
+    position: absolute;
+    top:37vh;
+    left: 10px;
+}
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    .gif-bear,
+    .gif-dance-cute {
+        width: 300px;
+        height: auto;
+    }
+
+    .gif-bear{
+        border-bottom-left-radius:5px;
+        position: absolute;
+        bottom: -300px;
+        left: -80px;
+    }
+    .gif-dance-cute{
+        border-bottom-right-radius:5px;
+        position: absolute;
+        right: -75px;
+    }
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 200px; 
+    .gif-night,
+    .gif-strong {
+        width: 300px;
+        height: auto;
+    }
+    
+    .gif-night {
+        border-top-left-radius: 5px;
+        position: absolute;
+        top: -75px;
+        left: -74px;
+    }
+    
+    .gif-strong {
+        border-top-right-radius: 5px;
+        position: absolute;
+        top: -30px;
+        right: -70px;
+    }
+}
